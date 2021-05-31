@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<style>
+  html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: #303234;
+    color: #eee;
+  }
+
+  body {
+    font-size: 28px;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .title {
+    font-size: 1.75rem;
+  }
+  #search {
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: inherit;
+    color: inherit;
+    border: 1px solid white;
+    padding: 5px;
+  }
+</style>
+<script async>
+  document.getElementById("form").addEventListener("submit", e => {
+    e.preventDefault();
+    const search = document.getElementById("search").value;
+    if(search.length > 0) {
+      window.location.href="https://duckduckgo.com/?q="+search;
+    }
+  })
+</script>
+</head>
+<body>
+  <form id="form">
+    <div class="title">DuckDuckJer</div>
+      <input id="search" type="text" size=50/>
+  </form>
+</body>
+</html>
