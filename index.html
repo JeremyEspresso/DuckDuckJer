@@ -29,20 +29,20 @@
     padding: 5px;
   }
 </style>
-<script async>
-  document.getElementById("form").addEventListener("submit", e => {
-    e.preventDefault();
-    const search = document.getElementById("search").value;
-    if(search.length > 0) {
-      window.location.href="https://duckduckgo.com/?q="+search;
-    }
-  })
-</script>
 </head>
 <body>
-  <form id="form">
-    <div class="title">DuckDuckJer</div>
-      <input id="search" type="text" size=50/>
-  </form>
+    <form id="form">
+        <div class="title">DuckDuckJer</div>
+        <input id="search" type="text" size=50/>
+    </form>
+    <script>
+        document.getElementById("form").addEventListener("submit", e => {
+            e.preventDefault();
+            const search = document.getElementById("search").value;
+            if(search.length > 0) {
+                window.location.href="https://duckduckgo.com/?q="+search;
+            }
+        })
+    </script>
 </body>
 </html>
